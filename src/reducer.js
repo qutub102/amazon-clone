@@ -1,6 +1,7 @@
 export const initialState = {
   basket: [],
   user: null,
+  srch: "",
 };
 
 export const getBasketTotal = (basket) =>
@@ -23,6 +24,11 @@ const reducer = (state, action) => {
         newBasket.splice(index, 1);
       }
       return { ...state, basket: newBasket };
+    case "SEARCH":
+      return {
+        ...state,
+        srch: action.input,
+      };
     default:
       return state;
   }

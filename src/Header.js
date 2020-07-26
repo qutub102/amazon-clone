@@ -6,9 +6,15 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { useStateValue } from "./StateProvider";
 
 function Header() {
-  const [{ basket }] = useStateValue();
+  const [{ basket }, dispatch] = useStateValue();
   const [input, setinput] = useState("");
-  const handleSearch = () => {};
+  const handleSearch = () => {
+    dispatch({
+      type: "SEARCH",
+      input: input,
+    });
+    setinput("");
+  };
   return (
     <nav className="header">
       <Link to="/">
@@ -26,7 +32,9 @@ function Header() {
           onChange={(event) => setinput(event.target.value)}
           value={input}
         />
-        <SearchIcon className="header__searchIcon" onClick={handleSearch} />
+        <Link to="/srch">
+          <SearchIcon className="header__searchIcon" onClick={handleSearch} />
+        </Link>
       </div>
       <div className="header__nav">
         <Link to="/login" className="header__link">

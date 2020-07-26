@@ -32,3 +32,8 @@
   border: 1px solid;
   border-color: #a88734 #9c7e31 #846a29;
 }
+@media (max-width: 500px) {
+  .product {
+    width: 80%;
+  }
+}
