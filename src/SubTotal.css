@@ -26,3 +26,10 @@
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
 }
+@media (max-width: 500px) {
+  .subTotal {
+    position: absolute;
+    top: 42px;
+    left: 21px;
+  }
+}

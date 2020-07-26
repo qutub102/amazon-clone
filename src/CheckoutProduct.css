@@ -13,9 +13,9 @@
 .checkoutProduct__info {
   padding-left: 20px;
 }
-.checkoutProduct__title{
-    font-size: 17px;
-    font-weight: 800;
+.checkoutProduct__title {
+  font-size: 17px;
+  font-weight: 800;
 }
 .checkoutProduct__info > button {
   background-color: #f0c14b;
@@ -23,4 +23,10 @@
   border: 1px solid;
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
+}
+@media (max-width: 500px) {
+  .checkoutProduct {
+    display: block;
+    margin:auto;
+  }
 }

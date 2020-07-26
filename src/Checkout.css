@@ -1,16 +1,25 @@
-.checkout{
-    display: flex;
-    padding: 20px;
-    background-color: white;
-    height: max-content;
+.checkout {
+  display: flex;
+  padding: 20px;
+  background-color: white;
+  height: max-content;
 }
-.checkout__ad{
-    width: 100%;
-    margin-bottom: 10px;
+.checkout__ad {
+  width: 100%;
+  margin-bottom: 10px;
 }
-.checkout__title{
-    margin-right: 10px;
-    padding: 10px;
-    border-bottom: 1px solid black;
-    margin-bottom: 30px;
+.checkout__title {
+  margin-right: 10px;
+  padding: 10px;
+  border-bottom: 1px solid black;
+  margin-bottom: 30px;
+}
+@media (max-width: 500px) {
+  .checkout__ad {
+    display: none;
+  }
+}
+.checkout__title {
+  margin-top: 120px;
+  border-bottom: none;
 }
